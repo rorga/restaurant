@@ -1,0 +1,23 @@
+
+
+<div >
+    <div class="menu-list-item-container">
+        <div *ngIf="menuListItemConfig.IconEnabled" class="icon-container">
+            <i class="fa-solid fa-utensils"></i>
+        </div>
+    
+        <div class="title-item-container">
+            <div class="title-container">
+                <span>{{menuListItemConfig.Title}}</span>
+            </div>
+        
+            <div *ngIf="menuListItemConfig.ItemsCounter">
+                <div class="item-container">
+                    <span>{{menuListItemConfig.Items}}</span>
+                    <span class="item-container__items"> items</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

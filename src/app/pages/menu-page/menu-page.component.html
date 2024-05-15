@@ -1,0 +1,25 @@
+<div class="menu-container">
+    <div class="menu-list-container">
+      <div class="menu-list-container__header">
+        <h2>Lista de Menús</h2>
+        <div>
+          <!-- Icono para abrir el modal -->
+          <i class="fa-solid fa-circle-plus" (click)="openAddModal()"></i>
+        </div>
+      </div>
+  
+      <!-- Lista de menús -->
+      <div *ngIf="menus && menus.length > 0" class="menu-list">
+        <div class="menu-list__items" *ngFor="let menu of menus">
+          <!-- Componente de ítem de menú -->
+          <app-menu-list-item [menuListItemConfig]="menu"></app-menu-list-item>
+        </div>
+      </div>
+    
+
+
+    </div>
+    <div class="menu-preview">
+      <!-- Contenido de vista previa (si es necesario) -->
+    </div>
+  </div>

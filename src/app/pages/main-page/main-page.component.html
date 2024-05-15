@@ -1,0 +1,26 @@
+<div class="main-container">
+    <div class="navigation-bar-container">
+        <div class="navigation-bar-container__logo">
+            <div class="navigation-bar-container__logo__img">
+                <img src="/assets/img/test-logo.png" alt="img_logo">
+            </div>
+            
+        </div>
+        <div class="navigation-bar-container__menu">
+            <div *ngFor="let section of sections">
+                <app-menu-section [Id]="section.Id" [Title]="section.Title" (sectionSelected)="onSelectedMenuSection($event)"  ></app-menu-section>
+            </div>
+        </div>
+
+    </div>
+    <div class="principal-content">
+        <div class="header">
+
+        </div>
+        <div class="body">
+            <ng-container *ngIf="selectedSection?.Id === MenuIds.MENU" >
+                <app-menu-page></app-menu-page>
+            </ng-container>
+        </div>
+    </div>
+</div>

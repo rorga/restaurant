@@ -1,0 +1,51 @@
+.main-container {
+    display: flex;
+    background-color: orange;
+    height: 100vh;
+
+    .navigation-bar-container {
+        display: flex;
+        flex-direction: column;
+        background-color: green;
+        width: 10%;
+        height: 100%;
+        &__logo {
+            width: 100%;
+            height: 10%;
+            background-color: purple;
+            &__img {
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+        }
+        &__menu {
+            width: 100%;
+            height: 90%;
+            background-color: white;
+        }
+    }
+    .principal-content {
+        display: flex;
+        flex-direction: column;
+        background-color: yellow;
+        width: 90%;
+
+        .header {
+            background-color: blue;
+            width: 100%;
+            height: 10%;
+        }
+
+        .body {
+            background-color: white;
+            width: 100%;
+            height: 90%;
+            border-left: 1px solid lightgray;
+        }
+    }
+}

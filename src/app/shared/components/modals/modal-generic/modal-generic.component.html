@@ -1,0 +1,18 @@
+<!-- Componente del modal -->
+<div class="modal" [ngClass]="{ 'open': showModal }">
+    <div class="modal-content">
+      <!-- Encabezado del modal (si es necesario) -->
+      <div class="modal-header">
+        <h3>{{ title }}</h3>
+        <span class="close-btn" (click)="closeModal()">Cerrar</span>
+      </div>
+      <!-- Contenido del modal -->
+      <div class="modal-body">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Superposición para bloquear clics fuera del modal -->
+  <div class="modal-overlay" [ngClass]="{ 'open': showModal }" (click)="closeModal()"></div>
+  
