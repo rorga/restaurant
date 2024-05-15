@@ -39,10 +39,6 @@ export class ModalService {
     this.modalComponentRef.instance.close.subscribe(() => {
       this.closeModal();
     });
-
-    // Insertar el contenido en el cuerpo del modal
-    const modalBody = domElem.querySelector('.modal-body');
-    modalBody!.innerHTML = content;
   }
 
   closeModal(): void {

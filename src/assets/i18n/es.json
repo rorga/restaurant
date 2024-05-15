@@ -1,0 +1,17 @@
+{
+    "LOGIN": {
+        "WELCOME-TITLE": "Bienvenido/a",
+        "SUB-TITLE-CREDENTIALS": "Introduce tus credenciales para acceder",
+        "USERNAME": "Usuario:",
+        "PASSWORD": "Contraseña:",
+        "LOGIN-BUTTON": "Acceder",
+        "MESSAGES": {
+            "MSG-REQUIRED-FIELD": "Este campo es obligatorio.",
+            "MSG-USER-PASS-INCORRECT": "Nombre de usuario o contraseña incorrectos.",
+            "MSG-INVALID-EMAIL": "Email no válido.",
+            "MSG-CONFIRM": "Confirmar",
+            "MSG-CANCEL": "Cancelar",
+            "MSG-QUIT": "¿Estás seguro/a que quieres desconectarte?"
+        }
+    }
+}

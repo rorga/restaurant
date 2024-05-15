@@ -8,6 +8,7 @@ import { MenuSectionComponent } from './shared/components/menu-section/menu-sect
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { MenuListItemComponent } from './shared/components/menu-list-item/menu-list-item.component';
 import { ModalGenericComponent } from './shared/components/modals/modal-generic/modal-generic.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ModalGenericComponent } from './shared/components/modals/modal-generic/
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

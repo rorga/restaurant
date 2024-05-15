@@ -2,20 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-modal-generic',
-  template: `
-    <div class="modal-overlay"></div>
-    <div class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span>{{ title }}</span>
-          <button (click)="close.emit()">Cerrar</button>
-        </div>
-        <div class="modal-body">
-          <ng-content></ng-content>
-        </div>
-      </div>
-    </div>
-  `,
+  templateUrl: './modal-generic.component.html',
   styles: [`
     .modal-overlay {
       position: fixed;
@@ -30,6 +17,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       position: fixed;
       top: 50%;
       left: 50%;
+      width: 500px;
+      height: 300px;
       transform: translate(-50%, -50%);
       background-color: white;
       z-index: 1001;
@@ -55,4 +44,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class ModalGenericComponent {
   @Input() title!: string;
   @Output() close = new EventEmitter<void>();
+  @Output() nameSubmitted = new EventEmitter<string>();
+
+  name: string = '';
+
+  submitName(): void {
+    this.nameSubmitted.emit(this.name);
+    this.close.emit();
+  }
 }
